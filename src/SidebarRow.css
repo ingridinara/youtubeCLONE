@@ -1,0 +1,54 @@
+.sidebarRow {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.sidebarRow__icon {
+    color: #606060;
+    font-size: large !important;
+    /* icons are actually fonts so , as we are 
+    using material ui, we have to overwrite it with
+    important */
+}
+
+.sidebarRow__title{
+    flex:1;
+    /* use as much room as you can in that container  */
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.sidebarRow:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.sidebarRow:hover > .sidebarRow__icon {
+    color: red;
+    /* when you hover over sidebarRown only for
+    the icon, change its color to red  */
+}
+
+.sidebarRow:hover > .sidebarRow__title {
+    font-weight: bold ;
+    /* when you hover over sidebarRown only for
+    the text, change its weight to bold  */
+}
+
+.sidebarRow.selected {
+    background-color: lightgray;
+}
+
+.sidebarRow.selected > .sidebarRow__icon {
+    color: red;
+    /* when it's selected change 
+    the icon  color to red  */
+}
+
+.sidebarRow.selected > .sidebarRow__title {
+    font-weight: bold ;
+       /* when it's selected change 
+    the icon weight  to bold  */
+}
